@@ -5,5 +5,357 @@
 }
 
 .body {
+    color: #404040;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1rem;
+    line-height: 1.5;
+    background-color: white;
+}
+
+.darkMode {
+    background-color: black;
+    color: white;
+}
+
+/* start header */
+header {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 99;
+}
+
+.header__nav {
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    grid-gap: 20px;
+    padding: 40px 0 20px 0;
+    align-items: center;
+}
+
+.header__logo a {
+    font-size: 2.25rem;
+    font-weight: 600;
+    color: #fff;
+    text-decoration: none;
+}
+
+.header__content {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px;
+    align-items: center;
+}
+
+.header__content .header__search-bar {
+    display: flex;
+    flex: 1;
+    margin: 0 auto;
+}
+
+.header__search {
+    position: relative;
+}
+
+.header__content .header__search-input {
+    display: flex;
+    flex: 1;
+    padding: 10px 50px 10px 20px;
+    height: 45px;
+    font-size: 0.875rem;
+    color: #fff;
+    font-weight: 400;
+    border-radius: 7px;
+    position: relative;
+    right: 73px;
+    background: #fff;
+    outline: 0;
+    border: 1px solid #fff;
+}
+
+.header__search i, .header__darkMode i, .header__menu {
+    position: absolute;
+    right: 93px;
+    font-size: 0.9375rem;
+    top: 15px;
+}
+
+.header__search i {
+    cursor: pointer;
+}
+
+.header__darkMode {
+    text-align: center;
+    position: absolute;
+    right: 100px;
+    top: 40px;
+}
+
+.header__darkMode i {
+    color: #fff;
+    font-size: 1.5rem;
+}
+
+.header__menu {
+    position: absolute;
+    right: 140px;
+    top: 40px;
+    outline: none;
+    border: none;
+    background: none;
+    text-align: center;
+    color: #fbfdfb;
+    font-size: 1.95em;
+    padding: 0 8px;
+}
+
+.header__menu i {
+    color: #fff;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+/* end header */
+
+/* Start overlay */
+.header__overlay {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+    top: 0;
+    left: 0;
+    background: rgb(6 3 0 / 77%);
+    z-index: 999;
+}
+
+.header__overlay-scale {
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.2s;
+}
+
+.header__openbtn {
+    visibility: visible;
+    opacity: 1;
+    transition: all 0.4s;
+}
+
+.header__overlay .header__closebtn {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    right: 40px;
+    top: 40px;
+    overflow: hidden;
+    border: none;
+    background: #f60;
+    color: #fff;
+    border-radius: 6px;
+    font-size: 23px;
+}
+
+.header__overlay-content {
+    position: relative;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+}
+  
+.header__overlay-content a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 600;
+    color: #fff;
+    display: block; 
+    transition: 0.2s; 
+}
+
+.header__overlay a:hover, .header__overlay a:focus {
+    color: #f60;
+}
+  
+/* @media screen and (max-height: 450px) {
+    .overlay a {font-size: 20px}
+    .overlay .closebtn {
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        right: 40px;
+        top: 40px;
+        overflow: hidden;
+        border: none;
+        background: #f60;
+        color: #fff;
+        border-radius: 6px;
+        font-size: inherit;
+    }
+} */
+/* end overlay */
+
+/* start carousel */
+.carousel {
+    background-image: linear-gradient(to right, #ff6600, hsl(30deg 100% 1% / 20%)),
+      url(../img/banner1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: initial;
+    background-attachment: fixed;
+    min-height: 700px;
+    height: 700px;
+}
+
+.carousel .carousel__content {
+    display: grid;
+    align-items: center;
+    height: 100%;
+}
+
+.carousel__content .carousel__info {
+    max-width: 600px;
+    text-align: left;
+}
+
+.carousel__content .carousel__info h3 {
+    font-size: 3.2rem;
+    line-height: 64px;
+    font-weight: 500;
+    text-transform: capitalize;
+    color: #fff;
+}
+
+.carousel__content .carousel__info p {
+    font-size: 1rem;
+    line-height: 28px;
+    color: #fff;
+}
+
+.carousel__info button {
+    background: transparent;
+    border: 1px solid #fff;
+    color: #fff;
+    padding: 12px 45px;
+    font-size: 1rem;
+    line-height: 30px;
+    font-weight: 700;
+    border-radius: 8px;
+    transition: 0.5s all;
+}
+
+.carousel__info button:hover {
+    background: #fff;
+    color: #f60;
+}
+
+.carousel__info button i {
+    padding-left: 10px;
+    font-size: 0.9rem;
+}
+
+/* start aboutUs */
+.aboutUs__left h6 {
+    font-size: 1.25rem;
+    font-weight: 400;
+    line-height: 30px;
+    letter-spacing: 1px;
+    color: #f60;
+    display: block;
+    font-family: 'Pacifico', cursive;
+}
+ 
+.aboutUs__left h3 {
+    font-size: 2.375rem;
+    line-height: 48px;
+    font-weight: 600;
+}
+
+.aboutUs .row {
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+.aboutUs__right p {
+    font-size: 1.125rem;
+    line-height: 28px;
+    color: #161c2db3;
     font-family: 'Quicksand', sans-serif;
 }
+/* end aboutUs */
+
+/* start inforRestaurants */
+.inforRestaurants {
+    background: #f60;
+}
+
+.inforRestaurants .row {
+    margin-right: 0;
+    margin-left: 0;
+}
+
+.inforRestaurants .col:hover .inforRestaurants__icon i {
+    color: #ffc600;
+    transition: 0.3s ease-in-out;
+}
+
+.inforRestaurants__img {
+    background: url("../img/banner3.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    position: relative;
+    min-height: 600px;
+}
+
+.inforRestaurants__infor h6 {
+    color: #fff;
+    font-size: 1.25rem;
+    font-weight: 400;
+    line-height: 30px;
+    letter-spacing: 1px;
+    font-family: 'Pacifico', cursive;
+}
+
+.inforRestaurants__infor h3 {
+    font-size: 2.375rem;
+    line-height: 48px;
+    font-weight: 600;
+}
+
+.inforRestaurants__infor p {
+    color: #ffdfc9;
+}
+
+.inforRestaurants__icon {
+    background: #fff;
+    width: 70px;
+    height: 70px;
+    text-align: center;
+    line-height: 70px;
+    border-radius: 6px;
+    transition: 0.3s ease-in-out;
+}
+
+.inforRestaurants__icon i {
+    color: #f60;
+    font-size: 1.5625rem;
+    line-height: 70px;
+}
+
+.inforRestaurants__subscribe a {
+    color: #232121;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 15px;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.inforRestaurants__subscribe p {
+    color: #ffdfc9;
+}
+
+/* end inforRestaurants */
