@@ -18,20 +18,16 @@ body {
 }
 
 /* start header */
-header {
+.header {
+    width: 100%;
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
     z-index: 99;
 }
 
-.header__nav {
-    display: grid;
-    grid-template-columns: 4fr 1fr;
-    grid-gap: 20px;
+.header__logo {
     padding: 40px 0 20px 0;
-    align-items: center;
 }
 
 .header__logo a {
@@ -41,73 +37,138 @@ header {
     text-decoration: none;
 }
 
-.header__content {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 20px;
-    align-items: center;
-}
-
-.header__content .header__search-bar {
+.header__search-input {
     display: flex;
-    flex: 1;
-    margin: 0 auto;
-}
-
-.header__search {
-    position: relative;
-}
-
-.header__content .header__search-input {
-    display: flex;
-    flex: 1;
     padding: 10px 50px 10px 20px;
     height: 45px;
     font-size: 1rem;
     color: #161c2db3;
     font-weight: 400;
     border-radius: 6px;
-    position: relative;
-    right: 73px;
-    background: #fff;
+    background: #ffffff;
     outline: 0;
-    border: 1px solid #fff;
-}
-
-.header__search i, .header__darkMode i, .header__menu {
-    position: absolute;
-    right: 93px;
-    top: 15px;
-    font-size: 0.9375rem;
+    border: 1px solid #ffffff;
 }
 
 .header__search i {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    font-size: 0.9375rem;
     cursor: pointer;
 }
 
-.header__darkMode {
-    position: absolute;
-    right: 100px;
-    top: 40px;
-    text-align: center;
+.header__darkMode button {
+    padding-top: 14px;
 }
 
-.header__darkMode i {
-    color: #fff;
-    font-size: 1.5rem;
+.header__darkMode button:focus {
+    box-shadow: none;
+}
+
+#switchButton .gg-sun {
+    display: none;
+    color: #eee;
+}
+  
+#switchButton .gg-moon {
+    display: block;
+    color: #eee;
+}
+
+.gg-moon,
+.gg-moon::after {
+    display: block;
+    box-sizing: border-box;
+    border-radius: 50%
+}
+
+.gg-moon {
+    overflow: hidden;
+    position: relative;
+    transform: rotate(-135deg) scale(var(--ggs,1));
+    width: 20px;
+    height: 20px;
+    border: 2px solid;
+    border-bottom: 2px solid transparent;
+}
+
+.gg-moon::after {
+    content: "";
+    position: absolute;
+    width: 12px;
+    height: 18px;
+    border: 2px solid transparent;
+    box-shadow: 0 0 0 2px;
+    top: 8px;
+    left: 2px
+}
+
+.gg-sun {
+    box-sizing: border-box;
+    position: relative;
+    display: block;
+    transform: scale(var(--ggs,1));
+    width: 24px;
+    height: 24px;
+    background:
+      linear-gradient(to bottom,
+          currentColor 4px,transparent 0)
+          no-repeat 5px -6px/2px 6px,
+      linear-gradient(to bottom,
+          currentColor 4px,transparent 0)
+          no-repeat 5px 14px/2px 6px,
+      linear-gradient(to bottom,
+          currentColor 4px,transparent 0)
+          no-repeat -8px 5px/6px 2px,
+      linear-gradient(to bottom,
+          currentColor 4px,transparent 0)
+          no-repeat 14px 5px/6px 2px;
+    border-radius: 100px;
+    box-shadow: inset 0 0 0 2px;
+    border: 6px solid transparent
+}
+
+.gg-sun::after, .gg-sun::before {
+    content: "";
+    display: block;
+    box-sizing: border-box;
+    position: absolute;
+    width: 24px;
+    height: 2px;
+    border-right: 4px solid;
+    border-left: 4px solid;
+    left: -6px;
+    top: 5px
+}
+
+.gg-sun::before {
+    transform: rotate(-45deg)
+}
+
+.gg-sun::after {
+    transform: rotate(45deg)
+}
+
+.dark #switchButton .gg-sun {
+    display: block;
+}
+  
+.dark #switchButton .gg-moon {
+    display: none;
+}
+
+.dark {
+    background-color: black;
+    color: white;
 }
 
 .header__menu {
-    position: absolute;
-    right: 140px;
-    top: 40px;
     outline: none;
     border: none;
     background: none;
-    text-align: center;
     color: #fbfdfb;
     font-size: 1.95em;
-    padding: 0 8px;
 }
 
 .header__menu i {

@@ -41,53 +41,69 @@
       rel="stylesheet"
     />
 
+    <!-- css.gg -->
+    <link href="https://css.gg/css" rel="stylesheet" />
+
     <!-- MAIN CSS -->
     <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
     <header class="header">
       <div class="container">
-        <div class="header__nav">
-          <div class="header__logo">
-            <h1><a href="#">Diner</a></h1>
-          </div>
-          <div class="header__content">
-            <div class="header__search-bar">
-              <form action="" method="get" class="header__search">
-                <input
-                  type="search"
-                  class="header__search-input"
-                  placeholder="Search here.."
-                />
-                <i class="fa fa-search"></i>
-              </form>
-              <div class="header__darkMode">
-                <i class="fa fa-moon" onclick="darkMode()"></i>
-              </div>
+        <nav class="header__logo navbar">
+          <a class="navbar-brand" href="#">Diner</a>
 
-              <button class="header__menu" onclick="openNav()">
-                <i class="fa fa-bars"></i>
+          <div class="header__left">
+            <div class="row">
+              <div class="col-8">
+                <div class="header__search">
+                  <form action="" method="get">
+                    <input
+                      id="search-input"
+                      type="search"
+                      class="header__search-input"
+                      placeholder="Search here.."
+                    />
+                    <i class="fa fa-search"></i>
+                  </form>
+                </div>
+              </div>
+              <div class="col-2">
+                <div class="header__darkMode">
+                  <button
+                    class="btn"
+                    id="switchButton"
+                    title="Click to switch theme"
+                  >
+                    <i class="gg-moon"></i>
+                    <i class="gg-sun"></i>
+                  </button>
+                </div>
+              </div>
+              <div class="col-2">
+                <button class="header__menu" onclick="openNav()">
+                  <i class="fa fa-bars"></i>
+                </button>
+              </div>
+            </div>
+            <div id="myOverlay" class="header__overlay header__overlay-scale">
+              <button class="header__closebtn" onclick="closeNav()">
+                <i class="fa fa-times"></i>
               </button>
 
-              <div id="myOverlay" class="header__overlay header__overlay-scale">
-                <button class="header__closebtn" onclick="closeNav()">
-                  <i class="fa fa-times"></i>
-                </button>
-
-                <div class="header__overlay-content">
-                  <a href="#">Home</a>
-                  <a href="#">About</a>
-                  <a href="#">Services</a>
-                  <a href="#">Blog Posts</a>
-                  <a href="#">404 page</a>
-                  <a href="#">Elements</a>
-                  <a href="#">Contact</a>
-                  <a href="#">Landing page</a>
-                </div>
+              <div class="header__overlay-content">
+                <a href="#">Home</a>
+                <a href="#">About</a>
+                <a href="#">Services</a>
+                <a href="#">Blog Posts</a>
+                <a href="#">404 page</a>
+                <a href="#">Elements</a>
+                <a href="#">Contact</a>
+                <a href="#">Landing page</a>
               </div>
             </div>
           </div>
-        </div>
+        </nav>
       </div>
     </header>
 
