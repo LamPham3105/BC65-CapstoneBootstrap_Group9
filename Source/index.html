@@ -55,7 +55,7 @@
 
           <div class="header__left">
             <div class="row">
-              <div class="col-8">
+              <div class="col">
                 <div class="header__search">
                   <form action="" method="get">
                     <input
@@ -68,7 +68,7 @@
                   </form>
                 </div>
               </div>
-              <div class="col-2">
+              <div class="col">
                 <div class="header__darkMode">
                   <button
                     class="btn"
@@ -80,7 +80,7 @@
                   </button>
                 </div>
               </div>
-              <div class="col-2">
+              <div class="col">
                 <button class="header__menu" onclick="openNav()">
                   <i class="fa fa-bars"></i>
                 </button>
@@ -111,11 +111,7 @@
       <div class="carousel__content">
         <div class="container">
           <div class="carousel__info">
-            <h3 class="mb-4">
-              The Only Thing We <br />
-              Love More Than Food <br />
-              Is You!
-            </h3>
+            <h3 class="mb-4">The Only Thing We Love More Than Food Is You!</h3>
             <p class="pr-lg-5 mt-md-4 mt-3">
               Lorem ipsum dolor sit amet consectetur ipsum elit. Qui eligendi
               vitae sit.Ea <br />
@@ -405,7 +401,62 @@
       </div>
     </section>
 
-    <section class="number"></section>
+    <section class="image-background py-5">
+      <div class="container pt-lg-2 pb-lg-4 py-4">
+        <div class="image-background__infor py-lg-5">
+          <h3 class="px-lg-5">Deliciousness jumping into the mouth.</h3>
+          <div class="image-background__infor-button pb-lg-5">
+            <button
+              class="image-background__button-left mt-sm-5 mt-4 mr-lg-4 mr-2"
+            >
+              Read More
+              <i class="fa fa-chevron-right"></i>
+            </button>
+            <button class="image-background__button-right mt-sm-5 mt-4">
+              Contact Us
+              <i class="fa fa-chevron-right"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="number py-lg-0 py-md-5 py-4">
+      <div class="container">
+        <div class="number__list">
+          <div class="row justify-content-center">
+            <div class="col-md-3 col-6 mt-md-0 mt-4">
+              <div class="number__item">
+                <i class="fa fa-building"></i>
+                <h4 class="counter">15,100</h4>
+                <p>Branches</p>
+              </div>
+            </div>
+            <div class="col-md-3 col-6 mt-md-0 mt-4">
+              <div class="number__item">
+                <i class="fa fa-cutlery"></i>
+                <h4 class="counter">19,256</h4>
+                <p>Food Items</p>
+              </div>
+            </div>
+            <div class="col-md-3 col-6 mt-md-0 mt-4">
+              <div class="number__item">
+                <i class="fa fa-users"></i>
+                <h4 class="counter">12,100</h4>
+                <p>Chefs</p>
+              </div>
+            </div>
+            <div class="col-md-3 col-6 mt-md-0 mt-4">
+              <div class="number__item">
+                <i class="fa fa-smile"></i>
+                <h4 class="counter">2,560</h4>
+                <p>Happy Customers</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <section class="video"></section>
 
@@ -433,6 +484,19 @@
       crossorigin="anonymous"
     ></script>
 
+    <!-- COUNT UP -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.js"
+      integrity="sha512-ZKNVEa7gi0Dz4Rq9jXcySgcPiK+5f01CqW+ZoKLLKr9VMXuCsw3RjWiv8ZpIOa0hxO79np7Ec8DDWALM0bDOaQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="./js/countUp/jquery.countup.js"></script>
+    <script>
+      $(".counter").countUp();
+    </script>
+
+    <!-- MAIN JS -->
     <script src="./js/index.js"></script>
   </body>
 </html>

@@ -8,7 +8,7 @@ function closeNav(){
     element.classList.remove("header__openbtn");
 }
 
-function darkMode() {
+document.getElementById("switchButton").onclick = function () {
     var element = document.body;
-    element.classList.toggle("darkMode");
-  }
+    element.classList.toggle("dark");
+};
