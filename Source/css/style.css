@@ -871,3 +871,71 @@ body {
 }
 
 /* end number */
+
+/* start bar */
+.right-bar {
+    float: right;
+    position: fixed;
+    right: 0px;
+    top: 150px;
+    width: 90px;
+    z-index: 9999;
+    text-align: center;
+}
+
+.right-bar i {
+    background: #0D1326;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    color: #e6ebff;
+    border-radius: 50px;
+    font-size: 26px;
+    cursor: pointer;
+    opacity: 0.5;
+}
+
+#right-sidebar {
+    width: 90px;
+    position: fixed;
+    z-index: 1000;
+    right: 0px;
+    top: 0;
+    margin-top: 140px;
+    transition: all .5s ease-in-out;
+    overflow-y: auto;
+}
+
+.hide-right-bar-notifications {
+    margin-right: -300px;
+    transition: all 0.3s ease-in-out;
+}
+
+.sidebar-menu {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 9999;
+    padding: 40px 5px 10px;
+    padding-top: 70px;
+    background: #0D1326;
+    border-top-left-radius: 9px;
+    border-bottom-left-radius: 9px;
+}
+
+.sidebar-menu .sidebar-menu__list {
+    border-top: 1px solid #41414d;
+    padding-top: 30px;
+}
+
+.sidebar-menu a {
+    display: block;
+    color: #e6ebff;
+    text-decoration: none;
+    line-height: 24px;
+    opacity: .6;
+    margin-bottom: 20px;
+    text-align: center;
+}
+/* end bar */
