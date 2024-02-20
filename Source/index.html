@@ -41,6 +41,9 @@
       rel="stylesheet"
     />
 
+    <!-- MAGNIFIC POPUP -->
+    <link rel="stylesheet" href="./css/magnificPopup/magnific-popup.css" />
+
     <!-- css.gg -->
     <link href="https://css.gg/css" rel="stylesheet" />
 
@@ -464,7 +467,26 @@
       </div>
     </section>
 
-    <section class="video"></section>
+    <section class="video py-5">
+      <div class="container py-lg-5">
+        <div class="video__background">
+          <a
+            href="#small-dialog"
+            class="open-popup-link popup-with-zoom-anim text-center pl-3"
+          >
+            <i class="fa fa-play"></i>
+          </a>
+        </div>
+        <div id="small-dialog" class="zoom-anim-dialog mfp-hide">
+          <iframe
+            src="https://player.vimeo.com/video/305185528"
+            frameborder="0"
+            allow="autoplay; fullscreen"
+            allowfullscreen=""
+          ></iframe>
+        </div>
+      </div>
+    </section>
 
     <section class="blog"></section>
 
@@ -535,6 +557,30 @@
     <script src="./js/countUp/jquery.countup.js"></script>
     <script>
       $(".counter").countUp();
+    </script>
+
+    <!-- MANGIFIC POPUP -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="./js/magnificPopup/jquery.magnific-popup.js"></script>
+
+    <script>
+      $(document).ready(function () {
+        $(".popup-with-zoom-anim").magnificPopup({
+          type: "inline",
+
+          fixedContentPos: false,
+          fixedBgPos: true,
+
+          overflowY: "auto",
+
+          closeBtnInside: true,
+          preloader: false,
+
+          midClick: true,
+          removalDelay: 300,
+          mainClass: "my-mfp-zoom-in",
+        });
+      });
     </script>
 
     <!-- MAIN JS -->
